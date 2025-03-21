@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ZotFlag : cahier des charges fonctionnel",
+    "section": "",
+    "text": "Dans un contexte d’inflation documentaire et de mésinformation (rétractions, prédations, pollution en cascade, etc.) dans la publication scientifique, , il est important d’outiller les chercheurs avec des algorithmes simples leur permettant de marquer (de drapeauter ? flagging) automatiquement des documents selon des critères précis.\n\nAjouter un marqueur si un auteur, un éditeur, une maison d’édition, un nom de revue, un mot-clé, etc. apparaît dans les métadonnées d’un élément présent dans sa propre bibliothèque Zotero.\n\nDans un contexte de besoin de robustesse et de facilité d’utilisation des marqueurs gérés par les chercheurs dans Zotero, il est important de leur donner un outil simple pour automatiquement valider, enrichir et compléter leurs ontologies et leurs indexations manuelles.\n\nAjouter un marqueur si un autre marqueur ou un terme est présent dans sa propre bibliothèque Zotero, permettant ainsi de facilement gérer des renvois et/ou une hiérarchie dans un système de marqueurs contrôlés."
+  },
+  {
+    "objectID": "index.html#panneau-de-paramétrage",
+    "href": "index.html#panneau-de-paramétrage",
+    "title": "ZotFlag : cahier des charges fonctionnel",
+    "section": "4.1 Panneau de paramétrage",
+    "text": "4.1 Panneau de paramétrage\n\n\n\nFigure 4 - Panneau de paramétrage\n\n\nNB: je me ravise par rapport à l’image ci-dessus (Figure 4) car on devrait ne pas proposer le repérage Étendu/Strict en ne faisant que du strict et en demandant à l’utilisateur de créer lui-même les variantes de noms à considérer. C’est plus facile à coder et cela engendre aussi moins de sur-indexation de faux-positifs (c’est aussi pour ça que c’est bien de ne pas faire de troncature dans le repérage des termes cibles de metadata)."
+  }
+]

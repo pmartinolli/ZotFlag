@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: docs
+
+lang: fr
+
+website:
+  title: "ZotFlag : cahier des charges fonctionnel"
+
+format:
+  html:
+    theme: cosmo
+    css: annexes/styles.css
+    toc: true
+
+editor: visual
+
