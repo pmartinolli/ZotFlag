@@ -7,10 +7,45 @@
     "text": "Dans un contexte d’inflation documentaire et de mésinformation (rétractions, prédations, pollution en cascade, etc.) dans la publication scientifique, , il est important d’outiller les chercheurs avec des algorithmes simples leur permettant de marquer (de drapeauter ? flagging) automatiquement des documents selon des critères précis.\n\nAjouter un marqueur si un auteur, un éditeur, une maison d’édition, un nom de revue, un mot-clé, etc. apparaît dans les métadonnées d’un élément présent dans sa propre bibliothèque Zotero.\n\nDans un contexte de besoin de robustesse et de facilité d’utilisation des marqueurs gérés par les chercheurs dans Zotero, il est important de leur donner un outil simple pour automatiquement valider, enrichir et compléter leurs ontologies et leurs indexations manuelles.\n\nAjouter un marqueur si un autre marqueur ou un terme est présent dans sa propre bibliothèque Zotero, permettant ainsi de facilement gérer des renvois et/ou une hiérarchie dans un système de marqueurs contrôlés."
   },
   {
+    "objectID": "index.html#marquage-maisons-dédition-revues-etc.",
+    "href": "index.html#marquage-maisons-dédition-revues-etc.",
+    "title": "ZotFlag : cahier des charges fonctionnel",
+    "section": "4.1 Marquage : maisons d’édition, revues, etc.",
+    "text": "4.1 Marquage : maisons d’édition, revues, etc.\n\nZotFlag ouvre et lit le fichier journals.csv (voir Figure 2).\nPour chaque référence sélectionnée :\n\nSi le champ journal correspond à une valeur de la colonne cible du fichier journals.csv, alors le marqueur correspondant du fichier journals.csv est ajouté à la référence sélectionnée.\n\nEnsuite :\nZotFlag ouvre et lit le fichier publishers.csv.\nPour chaque référence sélectionnée :\n\nSi le champ publisher correspond à une valeur de la colonne cible du fichier publishers.csv, alors le marqueur correspondant du fichier publishers.csv est ajouté à la référence sélectionnée.\n\n\n\n\n\nFigure 2 - Aperçu du fichier CSV dans le tableur Calc\n\n\n\n4.1.0.1 Intentions originales de ce traitement :\n\nRepérer les maisons d’édition prédatrices ou douteuses ou médiocre en les marquant du sceau de l’infamie.\nMettre en valeur les références issues de maisons d’édition ou de revues de haute qualité avec un marqueur spécial (par exemple _TOP)."
+  },
+  {
+    "objectID": "index.html#marquage-auteurs-éditeurs-etc.",
+    "href": "index.html#marquage-auteurs-éditeurs-etc.",
+    "title": "ZotFlag : cahier des charges fonctionnel",
+    "section": "4.2 Marquage : auteurs, éditeurs, etc.",
+    "text": "4.2 Marquage : auteurs, éditeurs, etc.\n\nZotFlag ouvre et lit le fichier persons.csv.\nPour chaque référence sélectionnée :\n\nSi le champ author (ou editor ou autre rôles) correspond à une valeur de la colonne cible du fichier persons.csv, alors le marqueur correspondant du fichier persons.csv est ajouté à la référence sélectionnée.\n\n\n\n4.2.0.1 Intentions originales de ce traitement :\n\nRepérer les chercheurs douteux.\nMettre en valeur les experts reconnus d’un domaine."
+  },
+  {
+    "objectID": "index.html#marquage-articles",
+    "href": "index.html#marquage-articles",
+    "title": "ZotFlag : cahier des charges fonctionnel",
+    "section": "4.3 Marquage : articles",
+    "text": "4.3 Marquage : articles\n\nZotFlag ouvre et lit le fichier dois.csv.\nPour chaque référence sélectionnée :\n\nSi le champ DOI correspond à une valeur de la colonne cible du fichier dois.csv, alors le marqueur correspondant du fichier dois.csv est ajouté à la référence sélectionnée.\n\n\n\n4.3.0.1 Intention originale de ce traitement :\n\nProlonger le travail de Guillaume Cabannac et son outil Feet of Clay qui permet de repérer les études qui citent beaucoup trop d’études rétractées. Rappel : Zotero marque automatiquement les études rétractées et reportées dans CrossRef via RetractionWatch mais il ne peut repérer les études « à fort risque de rétraction »."
+  },
+  {
+    "objectID": "index.html#marquage-termes-dans-les-métadonnées",
+    "href": "index.html#marquage-termes-dans-les-métadonnées",
+    "title": "ZotFlag : cahier des charges fonctionnel",
+    "section": "4.4 Marquage : termes dans les métadonnées",
+    "text": "4.4 Marquage : termes dans les métadonnées\n\nZotFlag ouvre et lit le fichier metadata.csv.\nPour chaque référence sélectionnée :\n\nSi au moins un champ de la référence OU un marqueurcorrespond à une valeur de la colonne cible du fichier metadata.csv, alors le marqueur correspondant du fichier metadata.csv est ajouté à la référence sélectionnée.\nAstuce pour ne travailler que sur les marqueurs : utiliser des marqueurs contrôlés avec un caractère spécial (par exemple _ludification ou _jeu de rôle).\n\nIntentions originales de ce traitement :\n\nInitier les utilisateurs à la puissance du vocabulaire contrôlé, même pour des projets modestes, en créant rapidement une liste contrôlée de mots-clés et leurs renvois.\nPermettre d’indexer rapidement tout un corpus en cherchant une liste de termes dans les métadonnées (titres, résumés, marqueurs, etc.). Ce sont les lignes annotées “renvoi” dans la Figure 3.\nPermettre de créer un vocabulaire contrôlé en deux niveaux (génériques&gt;spécifique) pour encore améliorer la repérabilité de son corpus. En effet, chaque mot-clé contrôlé peut ajouter un mot clé générique. Ce sont les lignes annotées “ajout de générique pour un spécifique” dans la Figure 3.\n\n\n\n\n\nFigure 3 - Aperçu du fichier metadata.csv"
+  },
+  {
+    "objectID": "index.html#marquage-tout",
+    "href": "index.html#marquage-tout",
+    "title": "ZotFlag : cahier des charges fonctionnel",
+    "section": "4.5 Marquage : tout",
+    "text": "4.5 Marquage : tout\n\nLance tous les traitements précédents."
+  },
+  {
     "objectID": "index.html#panneau-de-paramétrage",
     "href": "index.html#panneau-de-paramétrage",
     "title": "ZotFlag : cahier des charges fonctionnel",
-    "section": "4.1 Panneau de paramétrage",
-    "text": "4.1 Panneau de paramétrage\n\n\n\nFigure 4 - Panneau de paramétrage\n\n\nNB: je me ravise par rapport à l’image ci-dessus (Figure 4) car on devrait ne pas proposer le repérage Étendu/Strict en ne faisant que du strict et en demandant à l’utilisateur de créer lui-même les variantes de noms à considérer. C’est plus facile à coder et cela engendre aussi moins de sur-indexation de faux-positifs (c’est aussi pour ça que c’est bien de ne pas faire de troncature dans le repérage des termes cibles de metadata)."
+    "section": "4.6 Panneau de paramétrage",
+    "text": "4.6 Panneau de paramétrage\n\n\n\nFigure 4 - Panneau de paramétrage\n\n\nNB: je me ravise par rapport à l’image ci-dessus (Figure 4) car on devrait ne pas proposer le repérage Étendu/Strict. À la place, il faudrait ne faire que du strict et demander à l’utilisateur de créer lui-même les variantes de noms à considérer. C’est plus facile à coder et cela engendre aussi moins de sur-indexation de faux-positifs (c’est aussi pour ça que c’est bien de ne pas faire de troncature dans le repérage des termes cibles de metadata.csv)."
   }
 ]

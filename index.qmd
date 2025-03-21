@@ -91,16 +91,17 @@ changements)](images/zotflag-figure1-menu-contextuel.png){fig-alt="Figure 1 - Me
 
 # Traitements
 
-#### Marquage : maisons d'édition, revues, etc.
+## Marquage : maisons d'édition, revues, etc.
 
 -   ZotFlag ouvre et lit le fichier **journals.csv** (voir Figure 2).
--   Pour chaque référence sélectionnées :
+-   Pour chaque référence sélectionnée :
     -   Si le champ **journal** correspond à une valeur de la colonne
         **cible** du fichier journals.csv, alors le marqueur
         correspondant du fichier journals.csv est ajouté à la référence
         sélectionnée.
+-   Ensuite :
 -   ZotFlag ouvre et lit le fichier **publishers.csv**.
--   Pour chaque référence sélectionnées :
+-   Pour chaque référence sélectionnée :
     -   Si le champ **publisher** correspond à une valeur de la colonne
         **cible** du fichier publishers.csv, alors le marqueur
         correspondant du fichier publishers.csv est ajouté à la
@@ -109,7 +110,7 @@ changements)](images/zotflag-figure1-menu-contextuel.png){fig-alt="Figure 1 - Me
 ![Figure 2 - Aperçu du fichier CSV dans le tableur
 Calc](images/zotflag-figure2-journals-csv.png)
 
-Intentions originales de ce traitement :
+#### Intentions originales de ce traitement :
 
 -   Repérer les maisons d'édition prédatrices ou douteuses ou médiocre
     en les marquant ~~du sceau de l'infamie.~~
@@ -118,30 +119,30 @@ Intentions originales de ce traitement :
     revues de haute qualité avec un marqueur spécial (par exemple
     **\_TOP**).
 
-#### Marquage : auteurs, éditeurs, etc.
+## Marquage : auteurs, éditeurs, etc.
 
 -   ZotFlag ouvre et lit le fichier **persons.csv**.
--   Pour chaque référence sélectionnées :
+-   Pour chaque référence sélectionnée :
     -   Si le champ **author** (ou editor ou autre rôles) correspond à
         une valeur de la colonne **cible** du fichier persons.csv, alors
         le marqueur correspondant du fichier persons.csv est ajouté à la
         référence sélectionnée.
 
-Intentions originales de ce traitement :
+#### Intentions originales de ce traitement :
 
 -   Repérer les chercheurs douteux.
 
 -   Mettre en valeur les experts reconnus d'un domaine.
 
-#### Marquage : articles
+## Marquage : articles
 
 -   ZotFlag ouvre et lit le fichier **dois.csv**.
--   Pour chaque référence sélectionnées :
+-   Pour chaque référence sélectionnée :
     -   Si le champ **DOI** correspond à une valeur de la colonne
         **cible** du fichier dois.csv, alors le marqueur correspondant
         du fichier dois.csv est ajouté à la référence sélectionnée.
 
-Intention originale de ce traitement :
+#### Intention originale de ce traitement :
 
 -   Prolonger le travail de Guillaume Cabannac et son outil [Feet of
     Clay](https://www.irit.fr/~Guillaume.Cabanac/problematic-paper-screener/feet-of-clay/)
@@ -150,10 +151,10 @@ Intention originale de ce traitement :
     rétractées et reportées dans CrossRef via RetractionWatch mais il ne
     peut repérer les études « à fort risque de rétraction ».
 
-#### Marquage : termes dans les métadonnées
+## Marquage : termes dans les métadonnées
 
 -   ZotFlag ouvre et lit le fichier **metadata.csv**.
--   Pour chaque référence sélectionnées :
+-   Pour chaque référence sélectionnée :
     -   Si au moins un champ de la référence OU un marqueurcorrespond à
         une valeur de la colonne **cible** du fichier metadata.csv,
         alors le marqueur correspondant du fichier metadata.csv est
@@ -178,7 +179,7 @@ Intention originale de ce traitement :
 ![Figure 3 - Aperçu du fichier
 metadata.csv](images/zotflag-figure3-marqueurs-csv.png)
 
-#### Marquage : tout
+## Marquage : tout
 
 -   Lance tous les traitements précédents.
 
@@ -188,12 +189,12 @@ metadata.csv](images/zotflag-figure3-marqueurs-csv.png)
 paramétrage](images/zotflag-figure4-parametres.png)
 
 NB: je me ravise par rapport à l'image ci-dessus (Figure 4) car on
-devrait ne pas proposer le repérage Étendu/Strict en ne faisant que du
-strict et en demandant à l'utilisateur de créer lui-même les variantes
-de noms à considérer. C'est plus facile à coder et cela engendre aussi
-moins de sur-indexation de faux-positifs (c'est aussi pour ça que c'est
-bien de ne pas faire de troncature dans le repérage des termes cibles de
-metadata).
+devrait ne pas proposer le repérage Étendu/Strict. À la place, il
+faudrait ne faire que du strict et demander à l'utilisateur de créer
+lui-même les variantes de noms à considérer. C'est plus facile à coder
+et cela engendre aussi moins de sur-indexation de faux-positifs (c'est
+aussi pour ça que c'est bien de ne pas faire de troncature dans le
+repérage des termes cibles de metadata.csv).
 
 # Réflexions
 

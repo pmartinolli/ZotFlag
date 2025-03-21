@@ -89,7 +89,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#fonctionnement-de-base" id="toc-fonctionnement-de-base" class="nav-link" data-scroll-target="#fonctionnement-de-base"><span class="header-section-number">3</span> Fonctionnement de base</a></li>
   <li><a href="#traitements" id="toc-traitements" class="nav-link" data-scroll-target="#traitements"><span class="header-section-number">4</span> Traitements</a>
   <ul class="collapse">
-  <li><a href="#panneau-de-paramétrage" id="toc-panneau-de-paramétrage" class="nav-link" data-scroll-target="#panneau-de-paramétrage"><span class="header-section-number">4.1</span> Panneau de paramétrage</a></li>
+  <li><a href="#marquage-maisons-dédition-revues-etc." id="toc-marquage-maisons-dédition-revues-etc." class="nav-link" data-scroll-target="#marquage-maisons-dédition-revues-etc."><span class="header-section-number">4.1</span> Marquage : maisons d’édition, revues, etc.</a></li>
+  <li><a href="#marquage-auteurs-éditeurs-etc." id="toc-marquage-auteurs-éditeurs-etc." class="nav-link" data-scroll-target="#marquage-auteurs-éditeurs-etc."><span class="header-section-number">4.2</span> Marquage : auteurs, éditeurs, etc.</a></li>
+  <li><a href="#marquage-articles" id="toc-marquage-articles" class="nav-link" data-scroll-target="#marquage-articles"><span class="header-section-number">4.3</span> Marquage : articles</a></li>
+  <li><a href="#marquage-termes-dans-les-métadonnées" id="toc-marquage-termes-dans-les-métadonnées" class="nav-link" data-scroll-target="#marquage-termes-dans-les-métadonnées"><span class="header-section-number">4.4</span> Marquage : termes dans les métadonnées</a></li>
+  <li><a href="#marquage-tout" id="toc-marquage-tout" class="nav-link" data-scroll-target="#marquage-tout"><span class="header-section-number">4.5</span> Marquage : tout</a></li>
+  <li><a href="#panneau-de-paramétrage" id="toc-panneau-de-paramétrage" class="nav-link" data-scroll-target="#panneau-de-paramétrage"><span class="header-section-number">4.6</span> Panneau de paramétrage</a></li>
   </ul></li>
   <li><a href="#réflexions" id="toc-réflexions" class="nav-link" data-scroll-target="#réflexions"><span class="header-section-number">5</span> Réflexions</a></li>
   </ul>
@@ -196,16 +201,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="traitements" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Traitements</h1>
-<section id="marquage-maisons-dédition-revues-etc." class="level4" data-number="4.0.0.1">
-<h4 data-number="4.0.0.1" class="anchored" data-anchor-id="marquage-maisons-dédition-revues-etc."><span class="header-section-number">4.0.0.1</span> Marquage : maisons d’édition, revues, etc.</h4>
+<section id="marquage-maisons-dédition-revues-etc." class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="marquage-maisons-dédition-revues-etc."><span class="header-section-number">4.1</span> Marquage : maisons d’édition, revues, etc.</h2>
 <ul>
 <li>ZotFlag ouvre et lit le fichier <strong>journals.csv</strong> (voir Figure 2).</li>
-<li>Pour chaque référence sélectionnées :
+<li>Pour chaque référence sélectionnée :
 <ul>
 <li>Si le champ <strong>journal</strong> correspond à une valeur de la colonne <strong>cible</strong> du fichier journals.csv, alors le marqueur correspondant du fichier journals.csv est ajouté à la référence sélectionnée.</li>
 </ul></li>
+<li>Ensuite :</li>
 <li>ZotFlag ouvre et lit le fichier <strong>publishers.csv</strong>.</li>
-<li>Pour chaque référence sélectionnées :
+<li>Pour chaque référence sélectionnée :
 <ul>
 <li>Si le champ <strong>publisher</strong> correspond à une valeur de la colonne <strong>cible</strong> du fichier publishers.csv, alors le marqueur correspondant du fichier publishers.csv est ajouté à la référence sélectionnée.</li>
 </ul></li>
@@ -216,46 +222,52 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Figure 2 - Aperçu du fichier CSV dans le tableur Calc</figcaption>
 </figure>
 </div>
-<p>Intentions originales de ce traitement :</p>
+<section id="intentions-originales-de-ce-traitement" class="level4" data-number="4.1.0.1">
+<h4 data-number="4.1.0.1" class="anchored" data-anchor-id="intentions-originales-de-ce-traitement"><span class="header-section-number">4.1.0.1</span> Intentions originales de ce traitement :</h4>
 <ul>
 <li><p>Repérer les maisons d’édition prédatrices ou douteuses ou médiocre en les marquant <del>du sceau de l’infamie.</del></p></li>
 <li><p>Mettre en valeur les références issues de maisons d’édition ou de revues de haute qualité avec un marqueur spécial (par exemple <strong>_TOP</strong>).</p></li>
 </ul>
 </section>
-<section id="marquage-auteurs-éditeurs-etc." class="level4" data-number="4.0.0.2">
-<h4 data-number="4.0.0.2" class="anchored" data-anchor-id="marquage-auteurs-éditeurs-etc."><span class="header-section-number">4.0.0.2</span> Marquage : auteurs, éditeurs, etc.</h4>
+</section>
+<section id="marquage-auteurs-éditeurs-etc." class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="marquage-auteurs-éditeurs-etc."><span class="header-section-number">4.2</span> Marquage : auteurs, éditeurs, etc.</h2>
 <ul>
 <li>ZotFlag ouvre et lit le fichier <strong>persons.csv</strong>.</li>
-<li>Pour chaque référence sélectionnées :
+<li>Pour chaque référence sélectionnée :
 <ul>
 <li>Si le champ <strong>author</strong> (ou editor ou autre rôles) correspond à une valeur de la colonne <strong>cible</strong> du fichier persons.csv, alors le marqueur correspondant du fichier persons.csv est ajouté à la référence sélectionnée.</li>
 </ul></li>
 </ul>
-<p>Intentions originales de ce traitement :</p>
+<section id="intentions-originales-de-ce-traitement-1" class="level4" data-number="4.2.0.1">
+<h4 data-number="4.2.0.1" class="anchored" data-anchor-id="intentions-originales-de-ce-traitement-1"><span class="header-section-number">4.2.0.1</span> Intentions originales de ce traitement :</h4>
 <ul>
 <li><p>Repérer les chercheurs douteux.</p></li>
 <li><p>Mettre en valeur les experts reconnus d’un domaine.</p></li>
 </ul>
 </section>
-<section id="marquage-articles" class="level4" data-number="4.0.0.3">
-<h4 data-number="4.0.0.3" class="anchored" data-anchor-id="marquage-articles"><span class="header-section-number">4.0.0.3</span> Marquage : articles</h4>
+</section>
+<section id="marquage-articles" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="marquage-articles"><span class="header-section-number">4.3</span> Marquage : articles</h2>
 <ul>
 <li>ZotFlag ouvre et lit le fichier <strong>dois.csv</strong>.</li>
-<li>Pour chaque référence sélectionnées :
+<li>Pour chaque référence sélectionnée :
 <ul>
 <li>Si le champ <strong>DOI</strong> correspond à une valeur de la colonne <strong>cible</strong> du fichier dois.csv, alors le marqueur correspondant du fichier dois.csv est ajouté à la référence sélectionnée.</li>
 </ul></li>
 </ul>
-<p>Intention originale de ce traitement :</p>
+<section id="intention-originale-de-ce-traitement" class="level4" data-number="4.3.0.1">
+<h4 data-number="4.3.0.1" class="anchored" data-anchor-id="intention-originale-de-ce-traitement"><span class="header-section-number">4.3.0.1</span> Intention originale de ce traitement :</h4>
 <ul>
 <li>Prolonger le travail de Guillaume Cabannac et son outil <a href="https://www.irit.fr/~Guillaume.Cabanac/problematic-paper-screener/feet-of-clay/">Feet of Clay</a> qui permet de repérer les études qui citent beaucoup trop d’études rétractées. Rappel : Zotero marque automatiquement les études rétractées et reportées dans CrossRef via RetractionWatch mais il ne peut repérer les études « à fort risque de rétraction ».</li>
 </ul>
 </section>
-<section id="marquage-termes-dans-les-métadonnées" class="level4" data-number="4.0.0.4">
-<h4 data-number="4.0.0.4" class="anchored" data-anchor-id="marquage-termes-dans-les-métadonnées"><span class="header-section-number">4.0.0.4</span> Marquage : termes dans les métadonnées</h4>
+</section>
+<section id="marquage-termes-dans-les-métadonnées" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="marquage-termes-dans-les-métadonnées"><span class="header-section-number">4.4</span> Marquage : termes dans les métadonnées</h2>
 <ul>
 <li>ZotFlag ouvre et lit le fichier <strong>metadata.csv</strong>.</li>
-<li>Pour chaque référence sélectionnées :
+<li>Pour chaque référence sélectionnée :
 <ul>
 <li>Si au moins un champ de la référence OU un marqueurcorrespond à une valeur de la colonne <strong>cible</strong> du fichier metadata.csv, alors le marqueur correspondant du fichier metadata.csv est ajouté à la référence sélectionnée.</li>
 <li>Astuce pour ne travailler que sur les marqueurs : utiliser des marqueurs contrôlés avec un caractère spécial (par exemple <strong>_ludification</strong> ou <strong>_jeu de rôle</strong>).</li>
@@ -274,21 +286,21 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="marquage-tout" class="level4" data-number="4.0.0.5">
-<h4 data-number="4.0.0.5" class="anchored" data-anchor-id="marquage-tout"><span class="header-section-number">4.0.0.5</span> Marquage : tout</h4>
+<section id="marquage-tout" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="marquage-tout"><span class="header-section-number">4.5</span> Marquage : tout</h2>
 <ul>
 <li>Lance tous les traitements précédents.</li>
 </ul>
 </section>
-<section id="panneau-de-paramétrage" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="panneau-de-paramétrage"><span class="header-section-number">4.1</span> Panneau de paramétrage</h2>
+<section id="panneau-de-paramétrage" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="panneau-de-paramétrage"><span class="header-section-number">4.6</span> Panneau de paramétrage</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/zotflag-figure4-parametres.png" class="img-fluid figure-img"></p>
 <figcaption>Figure 4 - Panneau de paramétrage</figcaption>
 </figure>
 </div>
-<p>NB: je me ravise par rapport à l’image ci-dessus (Figure 4) car on devrait ne pas proposer le repérage Étendu/Strict en ne faisant que du strict et en demandant à l’utilisateur de créer lui-même les variantes de noms à considérer. C’est plus facile à coder et cela engendre aussi moins de sur-indexation de faux-positifs (c’est aussi pour ça que c’est bien de ne pas faire de troncature dans le repérage des termes cibles de metadata).</p>
+<p>NB: je me ravise par rapport à l’image ci-dessus (Figure 4) car on devrait ne pas proposer le repérage Étendu/Strict. À la place, il faudrait ne faire que du strict et demander à l’utilisateur de créer lui-même les variantes de noms à considérer. C’est plus facile à coder et cela engendre aussi moins de sur-indexation de faux-positifs (c’est aussi pour ça que c’est bien de ne pas faire de troncature dans le repérage des termes cibles de metadata.csv).</p>
 </section>
 </section>
 <section id="réflexions" class="level1" data-number="5">
