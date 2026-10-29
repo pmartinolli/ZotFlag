@@ -1,7 +1,69 @@
 # ZotFlag
 A Zotero plugin to index tags automatically based on authors, publishers, DOI, journals and keywords found in csv concordance tables.
 
-# In French
+---
+
+**In English**
+
+Zotero Extension (7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.
+
+Specifications: [https://pmartinolli.github.io/ZotFlag/](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
+
+### Languages
+
+The interface (menu, messages, settings, template files) follows the language selected in Zotero: English, French, Spanish, German, Italian, Portuguese (Brazil and Portugal), Dutch, Japanese, Simplified Chinese. For any other language, ZotFlag is displayed in English (or in the closest variant). CSV column headers are recognized in all these languages (Marqueur / Marker / Marcador / Markierung…, Cible / Target / Objetivo / Ziel…): files are shareable.
+
+To add a language: copy `locale/en-US/zotflag.ftl` to `locale/<code>/` and translate it.
+
+### Installation
+
+Zotero > Tools > Plugins > gear icon > "Install Plugin From File…" > `zotflag-1.1.0.xpi`.
+
+### Configuration
+
+Zotero > Settings > ZotFlag:
+
+* CSV file location (Browse… button);
+* Name of the tag column and the target column (empty = default name for the Zotero language, e.g., Marqueur/Cible in French, Marker/Target in English);
+* Button to create missing model/template CSV files.
+
+### CSV Files (in the selected folder)
+
+| File | Compared to |
+| --- | --- |
+| `journals.csv` | Publication title (journal, book, proceedings, website…) and journal abbreviation |
+| `publishers.csv` | Publisher (and equivalent fields: university, institution, label…) |
+| `persons.csv` | All creators (author, editor, other roles), target in *Last Name, First Name* format |
+| `dois.csv` | DOI (DOI field, `DOI:` line in the Extra field, doi.org URL) |
+| `metadata.csv` | All fields (whole word or phrase) and existing tags (strict equality) |
+
+**Columns:** Marker/Tag, Target, and any other column (e.g., Notes) ignored. One line = one tag for one target; repeat the line for multiple tags or multiple variants.
+
+Comma, semicolon, or tab separator detected automatically; UTF-8 (fallback Windows-1252).
+
+### Usage
+
+Select one, several, or all references > right-click > ZotFlag >
+
+* Flagging: publishers, journals, etc. (`journals.csv` then `publishers.csv`)
+* Flagging: authors, editors, etc. (`persons.csv`)
+* Flagging: terms in metadata (`metadata.csv`)
+* Flagging: articles (`dois.csv`)
+* Flagging: all (all processes; `metadata.csv` last)
+
+### Matching Rules (Strict Only)
+
+* No truncation, no automatic variants: create one line per variant yourself.
+* Ignored: case, accents and ligatures (é = e, ç = c, œ = oe), multiple spaces, typographic apostrophes/hyphens, HTML tags like `<i>`, etc.
+* **Persons:** `Roux, D` matches `Roux D` (and "Roux D.") but not `Roux Damien`. A target without a comma matches a name in a single field (institution).
+* **`metadata.csv`:** The term must appear as a whole word/phrase ("jeu de rôle" does not match "jeux de rôle" nor "jeu de rôles"). A target that is an existing tag (e.g., `_jeu de rôle`) allows adding a generic tag (e.g., `_JEU`); additions can chain together (multiple levels possible).
+* An already existing tag is never duplicated. Read-only libraries are ignored.
+
+### License
+
+GPL-3.0-or-later. Authors: Pascal Martinolli (specifications); code generated with Claude.
+
+*In French*
 Extension Zotero (7 à 10) qui ajoute automatiquement des marqueurs aux références sélectionnées
 quand leurs métadonnées correspondent à des listes tenues dans des fichiers CSV.
 Cahier des charges : [https://pmartinolli.github.io/ZotFlag/](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
