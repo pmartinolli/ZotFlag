@@ -4,7 +4,7 @@ A Zotero plugin to index tags automatically based on authors, publishers, DOI, j
 # In French
 Extension Zotero (7 à 10) qui ajoute automatiquement des marqueurs aux références sélectionnées
 quand leurs métadonnées correspondent à des listes tenues dans des fichiers CSV.
-Cahier des charges : https://pmartinolli.github.io/ZotFlag/ (Pascal Martinolli, 2025).
+Cahier des charges : [https://pmartinolli.github.io/ZotFlag/](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
 
 ## Langues
 L'interface (menu, messages, paramètres, fichiers modèles) suit la langue choisie dans Zotero :
