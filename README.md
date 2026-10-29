@@ -41,6 +41,8 @@ Zotero > Settings > ZotFlag:
 
 Comma, semicolon, or tab separator detected automatically; UTF-8 (fallback Windows-1252).
 
+Examples are provided in this repo. 
+
 ### Usage
 
 Select one, several, or all references > right-click > ZotFlag >
@@ -63,7 +65,11 @@ Select one, several, or all references > right-click > ZotFlag >
 
 GPL-3.0-or-later. Authors: Pascal Martinolli (specifications); code generated with Claude.
 
-*In French*
+
+---
+
+**In French**
+
 Extension Zotero (7 à 10) qui ajoute automatiquement des marqueurs aux références sélectionnées
 quand leurs métadonnées correspondent à des listes tenues dans des fichiers CSV.
 Cahier des charges : [https://pmartinolli.github.io/ZotFlag/](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
