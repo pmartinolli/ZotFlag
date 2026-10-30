@@ -28,8 +28,10 @@ references when their metadata matches lists kept in CSV files.
 GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code
 generated with Claude.
 
-\\\* : « Make it so. » Catchphrase by Gene Roddenberry, inpired by
-British navy officers of the XIXe century, first used in "Encounter At
-Farpoint" (28 September 1987) and reused with much delight by Captain
-Jean-Luc Picard during the run of
-[ST:TNG](https://www.startrek.com/en-ca/videos/make-it-so-captain-picard).
+\* : « Make it so. » was a catchphrase written by Gene Roddenberry,
+[inspired](https://en.wiktionary.org/wiki/make_it_so) by the British
+naval officers of the XIXe century. It was first used in "Encounter At
+Farpoint" (28 September 1987) and then reused with much delight by
+Captain Jean-Luc Picard (*In memoriam*) during the run of
+[ST:TNG](https://www.startrek.com/en-ca/videos/make-it-so-captain-picard)
+1987-1994.
