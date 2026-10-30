@@ -9,8 +9,6 @@ A Zotero plugin to index tags automatically based on authors, publishers, DOI, j
 
 Zotero Extension (7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.
 
-Specifications: [https://pmartinolli.github.io/ZotFlag_cahierdescharges/](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
-
 ### Languages
 
 The interface (menu, messages, settings, template files) follows the language selected in Zotero: English, French, Spanish, German, Italian, Portuguese (Brazil and Portugal), Dutch, Japanese, Simplified Chinese. For any other language, ZotFlag is displayed in English (or in the closest variant). CSV column headers are recognized in all these languages (Marqueur / Marker / Marcador / Markierung…, Cible / Target / Objetivo / Ziel…): files are shareable.
@@ -63,6 +61,8 @@ Select one, several, or all references > right-click > ZotFlag >
 * **`metadata.csv`:** The term must appear as a whole word/phrase ("jeu de rôle" does not match "jeux de rôle" nor "jeu de rôles"). A target that is an existing tag (e.g., `_jeu de rôle`) allows adding a generic tag (e.g., `_JEU`); additions can chain together (multiple levels possible).
 * An already existing tag is never duplicated. Read-only libraries are ignored.
 
+[2025 Specifications](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
+
 ### License
 
 GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code generated with Claude.
@@ -72,9 +72,8 @@ GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code generated wit
 
 **In French**
 
-Extension Zotero (7 à 10) qui ajoute automatiquement des marqueurs aux références sélectionnées
-quand leurs métadonnées correspondent à des listes tenues dans des fichiers CSV.
-Cahier des charges : [https://pmartinolli.github.io/ZotFlag_cahierdescharges/](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
+Extension Zotero (7 à 10) qui ajoute automatiquement des marqueurs aux références sélectionnées quand leurs métadonnées correspondent à des listes tenues dans des fichiers CSV.
+
 
 ## Langues
 L'interface (menu, messages, paramètres, fichiers modèles) suit la langue choisie dans Zotero :
@@ -124,5 +123,8 @@ Sélectionner une, plusieurs ou toutes les références > clic droit > **ZotFlag
   d'ajouter un générique (`_JEU`) ; les ajouts s'enchaînent (plusieurs niveaux possibles).
 - Un marqueur déjà présent n'est jamais dupliqué. Les bibliothèques en lecture seule sont ignorées.
 
+[Cahier des charges fonctionnel](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
+
+
 ## Licence
-GPL-3.0-or-later. Auteur : Pascal Martinolli (cahier des charges) ; code généré avec Claude.
+GPL-3.0-or-later. Auteur : Pascal Martinolli (spécifications) ; code généré avec Claude.
