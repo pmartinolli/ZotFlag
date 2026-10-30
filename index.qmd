@@ -1,13 +1,13 @@
 ---
 title: "ZotFlag"
-subtitle: "Zotero plugin for automatic tagging"
-lang: fr
+subtitle: "A Zotero plugin for automatic tagging"
+lang: en
 author:
       - name: "Pascal Martinolli"
         orcid: "0000-0003-0122-5300"
         affiliation: "Bibliothèques de l'Université de Montréal"
 date: "2026-10-30"
-abstract: "A Zotero plugin to index tags automatically based on authors, publishers, DOI, journals and keywords (title, abstract, tags) found in csv concordance tables."
+abstract: "A Zotero plugin to index tags automatically based on authors, publishers, DOI, journals and keywords (title, abstract, tags) found in csv concordance tables you own and you curate. Can be used to flag great or poor science based on your criteria, or to add a generic layer of subjects on the top of your existing controlled vocabulary. Make it so*." 
 format: 
   html:
     code-fold: false
@@ -18,9 +18,18 @@ editor:
 
 ![ZotFlag infographic](zotflag-infographic.png)
 
-Zotero Extension (7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.
+Zotero Extension (7 to 10) that automatically adds tags to selected
+references when their metadata matches lists kept in CSV files.
 
 - [GitHub Repository](https://github.com/pmartinolli/ZotFlag)
-- [Specifications](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
+- [Specifications](https://pmartinolli.github.io/ZotFlag_cahierdescharges/)
+  (Pascal Martinolli, 2025).
 
-GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code generated with Claude.
+GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code
+generated with Claude.
+
+\\\* : « Make it so. » Catchphrase by Gene Roddenberry, inpired by
+British navy officers of the XIXe century, first used in "Encounter At
+Farpoint" (28 September 1987) and reused with much delight by Captain
+Jean-Luc Picard during the run of
+[ST:TNG](https://www.startrek.com/en-ca/videos/make-it-so-captain-picard).

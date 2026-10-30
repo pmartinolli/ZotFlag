@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
 
-lang: fr
+lang: en
 
 website:
   title: "ZotFlag : Zotero plugin"
