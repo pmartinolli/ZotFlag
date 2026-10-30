@@ -3,7 +3,9 @@ A Zotero plugin to index tags automatically based on authors, publishers, DOI, j
 
 ---
 
-**In English**
+(en français plus  bas)
+
+![ZotFlag infographic](zotflag-infographic.png)
 
 Zotero Extension (7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.
 
@@ -17,14 +19,14 @@ To add a language: copy `locale/en-US/zotflag.ftl` to `locale/<code>/` and trans
 
 ### Installation
 
-Zotero > Tools > Plugins > gear icon > "Install Plugin From File…" > `zotflag-1.1.0.xpi`.
+Zotero > Tools > Plugins > gear icon > "Install Plugin From File…" > `zotflag-...xpi`.
 
 ### Configuration
 
 Zotero > Settings > ZotFlag:
 
 * CSV file location (Browse… button);
-* Name of the tag column and the target column (empty = default name for the Zotero language, e.g., Marqueur/Cible in French, Marker/Target in English);
+* Name of the tag column and the target column (empty = default name for the Zotero language, e.g., Marqueur/Cible in French, TagstoAdd/LookingFor in English);
 * Button to create missing model/template CSV files.
 
 ### CSV Files (in the selected folder)
@@ -35,9 +37,9 @@ Zotero > Settings > ZotFlag:
 | `publishers.csv` | Publisher (and equivalent fields: university, institution, label…) |
 | `persons.csv` | All creators (author, editor, other roles), target in *Last Name, First Name* format |
 | `dois.csv` | DOI (DOI field, `DOI:` line in the Extra field, doi.org URL) |
-| `metadata.csv` | All fields (whole word or phrase) and existing tags (strict equality) |
+| `keywords.csv` | All fields (whole word or phrase) and existing tags (strict equality) |
 
-**Columns:** Marker/Tag, Target, and any other column (e.g., Notes) ignored. One line = one tag for one target; repeat the line for multiple tags or multiple variants.
+**Columns:** TagsToAdd/, LookingFor, and any other column (e.g., Notes) ignored. One line = one tag for one target; repeat the line for multiple tags or multiple variants. Non case sensitive. No accent sensitive. No truncation/ No wildcard.
 
 Comma, semicolon, or tab separator detected automatically; UTF-8 (fallback Windows-1252).
 
@@ -49,9 +51,9 @@ Select one, several, or all references > right-click > ZotFlag >
 
 * Flagging: publishers, journals, etc. (`journals.csv` then `publishers.csv`)
 * Flagging: authors, editors, etc. (`persons.csv`)
-* Flagging: terms in metadata (`metadata.csv`)
+* Flagging: terms in metadata Title, Abstracts and Tags (`keywords.csv`)
 * Flagging: articles (`dois.csv`)
-* Flagging: all (all processes; `metadata.csv` last)
+* Flagging: all (all processes; `keywords.csv` last), also with F12 keyboard shortcut.
 
 ### Matching Rules (Strict Only)
 
@@ -63,7 +65,7 @@ Select one, several, or all references > right-click > ZotFlag >
 
 ### License
 
-GPL-3.0-or-later. Authors: Pascal Martinolli (specifications); code generated with Claude.
+GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code generated with Claude.
 
 
 ---
@@ -78,17 +80,16 @@ Cahier des charges : [https://pmartinolli.github.io/ZotFlag_cahierdescharges/](h
 L'interface (menu, messages, paramètres, fichiers modèles) suit la langue choisie dans Zotero :
 anglais, français, espagnol, allemand, italien, portugais (Brésil et Portugal), néerlandais, japonais,
 chinois simplifié. Pour toute autre langue, ZotFlag s'affiche en anglais (ou dans la variante la plus
-proche). Les en-têtes de colonnes CSV sont reconnus dans toutes ces langues (Marqueur / Marker /
-Marcador / Markierung…, Cible / Target / Objetivo / Ziel…) : les fichiers sont partageables.
+proche). Les en-têtes de colonnes CSV sont reconnus dans toutes ces langues (Marqueur, Cible, Notes).
 Pour ajouter une langue : copier `locale/en-US/zotflag.ftl` dans `locale/<code>/` et le traduire.
 
 ## Installation
-Zotero > Outils > Plugins (Extensions) > roue dentée > « Install Plugin From File… » > `zotflag-1.1.0.xpi`.
+Zotero > Outils > Plugins (Extensions) > roue dentée > « Install Plugin From File… » > `zotflag-...xpi`.
 
 ## Paramétrage
 Zotero > Paramètres > ZotFlag :
 - **Emplacement des fichiers CSV** (bouton Parcourir…) ;
-- nom de la colonne des marqueurs et de la colonne cible (vide = nom par défaut de la langue de Zotero, ex. `Marqueur`/`Cible` en français, `Marker`/`Target` en anglais) ;
+- nom de la colonne des marqueurs et de la colonne cible (vide = nom par défaut de la langue de Zotero, ex. `Marqueur`/`Cible` en français) ;
 - bouton pour créer les fichiers CSV modèles manquants.
 
 ## Fichiers CSV (dans le dossier choisi)
@@ -98,19 +99,19 @@ Zotero > Paramètres > ZotFlag :
 | `publishers.csv` | maison d'édition (et champs équivalents : université, institution, label…) |
 | `persons.csv` | tous les créateurs (auteur, éditeur, autres rôles), cible au format `nom, prénom` |
 | `dois.csv` | DOI (champ DOI, ligne `DOI:` du champ Extra, URL doi.org) |
-| `metadata.csv` | tous les champs (mot ou expression entière) et les marqueurs existants (égalité stricte) |
+| `keywords.csv` | tous les champs (mot ou expression entière) et les marqueurs existants (égalité stricte) |
 
 Colonnes : `Marqueur`, `Cible`, et toute autre colonne (ex. `Notes`) ignorée. Une ligne = un marqueur
-pour une cible ; répéter la ligne pour plusieurs marqueurs ou plusieurs variantes.
+pour une cible ; répéter la ligne pour plusieurs marqueurs ou plusieurs variantes. Non sensible aux accents ou aux majuscules. Ne fait pas de troncature.
 Séparateur virgule, point-virgule ou tabulation détecté automatiquement ; UTF-8 (repli Windows-1252).
 
 ## Utilisation
 Sélectionner une, plusieurs ou toutes les références > clic droit > **ZotFlag** >
 - Marquage : maisons d'édition, revues, etc. (journals.csv puis publishers.csv)
 - Marquage : auteurs, éditeurs, etc. (persons.csv)
-- Marquage : termes dans les métadonnées (metadata.csv)
+- Marquage : termes dans les métadonnées (keywords.csv)
 - Marquage : articles (dois.csv)
-- Marquage : tout (tous les traitements ; metadata.csv en dernier)
+- Marquage : tout (tous les traitements ; keywords.csv en dernier)
 
 ## Règles de repérage (strict uniquement)
 - Pas de troncature, pas de variantes automatiques : créer soi-même une ligne par variante.
@@ -124,4 +125,4 @@ Sélectionner une, plusieurs ou toutes les références > clic droit > **ZotFlag
 - Un marqueur déjà présent n'est jamais dupliqué. Les bibliothèques en lecture seule sont ignorées.
 
 ## Licence
-GPL-3.0-or-later. Auteurs : Pascal Martinolli (cahier des charges) ; code généré avec Claude.
+GPL-3.0-or-later. Auteur : Pascal Martinolli (cahier des charges) ; code généré avec Claude.
