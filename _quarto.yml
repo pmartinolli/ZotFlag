@@ -1,0 +1,15 @@
+project:
+  type: website
+  output-dir: docs
+
+lang: fr
+
+website:
+  title: "ZotFlag : Zotero plugin"
+
+format:
+  html:
+    theme: cosmo
+
+editor: visual
+

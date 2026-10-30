@@ -1,0 +1,26 @@
+---
+title: "ZotFlag"
+subtitle: "Zotero plugin for automatic tagging"
+lang: fr
+author:
+      - name: "Pascal Martinolli"
+        orcid: "0000-0003-0122-5300"
+        affiliation: "Bibliothèques de l'Université de Montréal"
+date: "2026-10-30"
+abstract: "A Zotero plugin to index tags automatically based on authors, publishers, DOI, journals and keywords (title, abstract, tags) found in csv concordance tables."
+format: 
+  html:
+    code-fold: false
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+![ZotFlag infographic](zotflag-infographic.png)
+
+Zotero Extension (7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.
+
+- [GitHub Repository](https://github.com/pmartinolli/ZotFlag)
+- [Specifications](https://pmartinolli.github.io/ZotFlag_cahierdescharges/) (Pascal Martinolli, 2025).
+
+GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code generated with Claude.
