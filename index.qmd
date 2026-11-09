@@ -22,8 +22,11 @@ Zotero Extension (7 to 10) that automatically adds tags to selected
 references when their metadata matches lists kept in CSV files.
 
 - [GitHub Repository](https://github.com/pmartinolli/ZotFlag)
+- [Discussion, application and empirical
+  analysis](https://pmartinolli.github.io/blog/2026/ZotFlag/) (in
+  French).
 - [Specifications](https://pmartinolli.github.io/ZotFlag_cahierdescharges/)
-  (Pascal Martinolli, 2025).
+  (in French, 2025).
 
 GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code
 generated with Claude.
