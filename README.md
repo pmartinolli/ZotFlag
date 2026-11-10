@@ -35,7 +35,7 @@ Zotero > Settings > ZotFlag:
 | `publishers.csv` | Publisher (and equivalent fields: university, institution, label…) |
 | `persons.csv` | All creators (author, editor, other roles), target in *Last Name, First Name* format |
 | `dois.csv` | DOI (DOI field, `DOI:` line in the Extra field, doi.org URL) |
-| `keywords.csv` | All fields (whole word or phrase) and existing tags (strict equality) |
+| `keywords.csv` | Title and abstract (whole word or phrase) and existing tags (strict equality) |
 
 **Columns:** TagsToAdd/, LookingFor, and any other column (e.g., Notes) ignored. One line = one tag for one target; repeat the line for multiple tags or multiple variants. Non case sensitive. No accent sensitive. No truncation/ No wildcard.
 
@@ -98,7 +98,7 @@ Zotero > Paramètres > ZotFlag :
 | `publishers.csv` | maison d'édition (et champs équivalents : université, institution, label…) |
 | `persons.csv` | tous les créateurs (auteur, éditeur, autres rôles), cible au format `nom, prénom` |
 | `dois.csv` | DOI (champ DOI, ligne `DOI:` du champ Extra, URL doi.org) |
-| `keywords.csv` | tous les champs (mot ou expression entière) et les marqueurs existants (égalité stricte) |
+| `keywords.csv` | Titre et résumé (mot ou expression entière) et les marqueurs existants (égalité stricte) |
 
 Colonnes : `Marqueur`, `Cible`, et toute autre colonne (ex. `Notes`) ignorée. Une ligne = un marqueur
 pour une cible ; répéter la ligne pour plusieurs marqueurs ou plusieurs variantes. Non sensible aux accents ou aux majuscules. Ne fait pas de troncature.
