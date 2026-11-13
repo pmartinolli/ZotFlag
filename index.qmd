@@ -7,7 +7,7 @@ author:
         orcid: "0000-0003-0122-5300"
         affiliation: "Bibliothèques de l'Université de Montréal"
 date: "2026-10-30"
-abstract: "A Zotero plugin to index tags automatically based on authors, publishers, DOI, journals and keywords (title, abstract, tags) found in csv concordance tables you own and you curate. Can be used to flag great or poor science based on your criteria, or to add a generic layer of subjects on the top of your existing controlled vocabulary. Make it so*." 
+abstract: "A Zotero plugin automatically adding tags based on Zotero fields and values in CSV concordance tables you own and you curate. Can be used to flag great or poor science based on your criteria, or to add a generic layer of subjects on the top of your existing controlled vocabulary. Make it so." 
 format: 
   html:
     code-fold: false
@@ -18,20 +18,45 @@ editor:
 
 ![ZotFlag infographic](zotflag-infographic.png)
 
-Zotero Extension (7 to 10) that automatically adds tags to selected
-references when their metadata matches lists kept in CSV files.
+It is a Zotero extension (for Zotero 7 to 10) that automatically adds
+tags to selected references when their metadata matches lists kept in
+CSV files.
 
 - [GitHub Repository](https://github.com/pmartinolli/ZotFlag)
 - [Discussion, application and empirical
   analysis](https://pmartinolli.github.io/blog/2026/ZotFlag/) (in
   French).
-- [Specifications](https://pmartinolli.github.io/ZotFlag_cahierdescharges/)
-  (in French, 2025).
+
++------------------+------------------------+
+| CSV filenames    | Matching Zotero fields |
++==================+========================+
+| `keywords.csv`   | Tags (strict)          |
+|                  |                        |
+|                  | Title                  |
+|                  |                        |
+|                  | Abstract               |
++------------------+------------------------+
+| `journals.csv`   | Publication            |
++------------------+------------------------+
+| `journals.csv`   | ISSN                   |
++------------------+------------------------+
+| `persons.csv`    | author                 |
+|                  |                        |
+|                  | editor                 |
++------------------+------------------------+
+| `publishers.csv` | Publisher              |
++------------------+------------------------+
+| `dois.csv`       | DOI                    |
++------------------+------------------------+
+| `urls.csv`       | URL                    |
++------------------+------------------------+
 
 GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code
 generated with Claude.
 
-\* : « Make it so. » was a catchphrase written by Gene Roddenberry,
+------------------------------------------------------------------------
+
+« Make it so. » was a catchphrase written by Gene Roddenberry,
 [inspired](https://en.wiktionary.org/wiki/make_it_so) by the British
 naval officers of the XIXe century. It was first used in "Encounter At
 Farpoint" (28 September 1987) and then reused with much delight by

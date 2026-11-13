@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
   <div class="abstract">
     <div class="block-title">Abstract</div>
-    A Zotero plugin to index tags automatically based on authors, publishers, DOI, journals and keywords (title, abstract, tags) found in csv concordance tables you own and you curate. Can be used to flag great or poor science based on your criteria, or to add a generic layer of subjects on the top of your existing controlled vocabulary. Make it so*.
+    A Zotero plugin automatically adding tags based on Zotero fields and values in CSV concordance tables you own and you curate. Can be used to flag great or poor science based on your criteria, or to add a generic layer of subjects on the top of your existing controlled vocabulary. Make it so.
   </div>
 </div>
 
@@ -135,14 +135,59 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>ZotFlag infographic</figcaption>
 </figure>
 </div>
-<p>Zotero Extension (7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.</p>
+<p>It is a Zotero extension (for Zotero 7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.</p>
 <ul>
 <li><a href="https://github.com/pmartinolli/ZotFlag">GitHub Repository</a></li>
 <li><a href="https://pmartinolli.github.io/blog/2026/ZotFlag/">Discussion, application and empirical analysis</a> (in French).</li>
-<li><a href="https://pmartinolli.github.io/ZotFlag_cahierdescharges/">Specifications</a> (in French, 2025).</li>
 </ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>CSV filenames</th>
+<th>Matching Zotero fields</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>keywords.csv</code></td>
+<td><p>Tags (strict)</p>
+<p>Title</p>
+<p>Abstract</p></td>
+</tr>
+<tr class="even">
+<td><code>journals.csv</code></td>
+<td>Publication</td>
+</tr>
+<tr class="odd">
+<td><code>journals.csv</code></td>
+<td>ISSN</td>
+</tr>
+<tr class="even">
+<td><code>persons.csv</code></td>
+<td><p>author</p>
+<p>editor</p></td>
+</tr>
+<tr class="odd">
+<td><code>publishers.csv</code></td>
+<td>Publisher</td>
+</tr>
+<tr class="even">
+<td><code>dois.csv</code></td>
+<td>DOI</td>
+</tr>
+<tr class="odd">
+<td><code>urls.csv</code></td>
+<td>URL</td>
+</tr>
+</tbody>
+</table>
 <p>GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code generated with Claude.</p>
-<p>* : « Make it so. » was a catchphrase written by Gene Roddenberry, <a href="https://en.wiktionary.org/wiki/make_it_so">inspired</a> by the British naval officers of the XIXe century. It was first used in “Encounter At Farpoint” (28 September 1987) and then reused with much delight by Captain Jean-Luc Picard (<em>In memoriam</em>) during the run of <a href="https://www.startrek.com/en-ca/videos/make-it-so-captain-picard">ST:TNG</a> 1987-1994.</p>
+<hr>
+<p>« Make it so. » was a catchphrase written by Gene Roddenberry, <a href="https://en.wiktionary.org/wiki/make_it_so">inspired</a> by the British naval officers of the XIXe century. It was first used in “Encounter At Farpoint” (28 September 1987) and then reused with much delight by Captain Jean-Luc Picard (<em>In memoriam</em>) during the run of <a href="https://www.startrek.com/en-ca/videos/make-it-so-captain-picard">ST:TNG</a> 1987-1994.</p>
 
 
 
