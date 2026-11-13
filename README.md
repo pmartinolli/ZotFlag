@@ -1,10 +1,6 @@
 # ZotFlag
 
-A Zotero plugin to index tags automatically based on authors, publishers, DOI, journals and keywords found in csv concordance tables.
-
 ------------------------------------------------------------------------
-
-![ZotFlag infographic](zotflag-infographic.png){width="444"}
 
 Zotero Extension (7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.
 
@@ -31,3 +27,5 @@ Zotero \> Settings \> ZotFlag:
 ### License
 
 GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code generated with Claude.
+
+![ZotFlag infographic](zotflag-infographic.png)
