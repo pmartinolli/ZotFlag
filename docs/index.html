@@ -142,8 +142,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 34%">
+<col style="width: 48%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -154,42 +154,54 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><code>keywords.csv</code></td>
-<td><p>Tags (strict)</p>
-<p>Title</p>
-<p>Abstract</p></td>
+<td><p>Tags (strict equality)</p>
+<p>Title (whole word or phrase)</p>
+<p>Abstract (whole word or phrase)</p></td>
 </tr>
 <tr class="even">
 <td><code>journals.csv</code></td>
-<td>Publication</td>
+<td><p>Publication title (journal, book, proceedings, website…) and journal abbreviation</p>
+<p>ISSN</p></td>
 </tr>
 <tr class="odd">
-<td><code>journals.csv</code></td>
-<td>ISSN</td>
-</tr>
-<tr class="even">
 <td><code>persons.csv</code></td>
-<td><p>author</p>
-<p>editor</p></td>
-</tr>
-<tr class="odd">
-<td><code>publishers.csv</code></td>
-<td>Publisher</td>
+<td>All creators (author, editor, other roles), target in <em>Last Name, First Name</em> format</td>
 </tr>
 <tr class="even">
-<td><code>dois.csv</code></td>
-<td>DOI</td>
+<td><code>publishers.csv</code></td>
+<td>Publisher (and equivalent fields: university, institution, label…)</td>
 </tr>
 <tr class="odd">
+<td><code>dois.csv</code></td>
+<td>DOI field<br>
+<code>DOI:</code> line in the Extra field<br>
+doi.org in URL field</td>
+</tr>
+<tr class="even">
 <td><code>urls.csv</code></td>
 <td>URL</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Usage</strong> : Right-click + ZotFlag. Or F12 keyboard shortcut (to index all).</p>
+<p><strong>Language</strong> : The interface (menu, messages, settings, template files) follows the language selected in Zotero: English, French, Spanish, German, Italian, Portuguese (Brazil and Portugal), Dutch, Japanese, Simplified Chinese. For any other language, ZotFlag is displayed in English (or in the closest variant). To add a language: copy <code>locale/en-US/zotflag.ftl</code> to <code>locale/&lt;code&gt;/</code> and translate it.</p>
+<p><strong>Columns</strong> : TagsToAdd/, LookingFor, and any other column (e.g., Notes) ignored. One line = one tag for one target; repeat the line for multiple tags or multiple variants. Non case sensitive. No accent sensitive. No truncation/ No wildcard.</p>
+<section id="matching-rules-strict-only" class="level3">
+<h3 class="anchored" data-anchor-id="matching-rules-strict-only">Matching Rules (Strict Only)</h3>
+<ul>
+<li>No truncation, no automatic variants: create one line per variant yourself.</li>
+<li>Ignored: case, accents and ligatures (é = e, ç = c, œ = oe), multiple spaces, typographic apostrophes/hyphens, HTML tags like <code>&lt;i&gt;</code>, etc.</li>
+<li>Persons: <code>Roux, D</code> matches <code>Roux D</code> (and “Roux D.”) but not <code>Roux Damien</code>. A target without a comma matches a name in a single field (institution).</li>
+<li><code>keywords.csv</code>: The term must appear as a whole word/phrase (“jeu de rôle” does not match “jeux de rôle” nor “jeu de rôles”). A target that is an existing tag (e.g., <code>_jeu de rôle</code>) allows adding a generic tag (e.g., <code>_JEU</code>); additions can chain together (multiple levels possible).</li>
+<li>An already existing tag is never duplicated. Read-only libraries are ignored.</li>
+<li>Comma, semicolon, or tab separator detected automatically; UTF-8 (fallback Windows-1252).</li>
+</ul>
 <p>GPL-3.0-or-later. Author: Pascal Martinolli (specifications); code generated with Claude.</p>
 <hr>
 <p>« Make it so. » was a catchphrase written by Gene Roddenberry, <a href="https://en.wiktionary.org/wiki/make_it_so">inspired</a> by the British naval officers of the XIXe century. It was first used in “Encounter At Farpoint” (28 September 1987) and then reused with much delight by Captain Jean-Luc Picard (<em>In memoriam</em>) during the run of <a href="https://www.startrek.com/en-ca/videos/make-it-so-captain-picard">ST:TNG</a> 1987-1994.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
