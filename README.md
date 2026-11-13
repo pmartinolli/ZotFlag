@@ -1,6 +1,7 @@
 # ZotFlag
 
 Zotero Extension (7 to 10) that automatically adds tags to selected references when their metadata matches lists kept in CSV files.
+
 ------------------------------------------------------------------------
 
 ### Installation
